@@ -102,8 +102,51 @@ public class Colosseum {
      * (Look, we can return objects too!)
      */
     public static Pokemon buildPokemon() {
-        Pokemon returnPokemon = null;
-        return returnPokemon;
+        Pokemon tempPokemon = new Pokemon();
+        System.out.println("Select from the following Pokemon types:");
+        System.out.println("1 - Electric Pokemon ");
+        System.out.println("2 - Fire Pokemon");
+        System.out.println("3 - Water Pokemon");
+        Scanner n = new Scanner(System.in);
+        int toSetType = Integer.parseInt(n.nextLine());
+        if (toSetType == 1) {
+            ElectricPokemon etempPokemon = new ElectricPokemon();
+            System.out.println("Name your Pokemon");
+            etempPokemon.setName(n.nextLine());
+            System.out.println("You named your Pokemon " + etempPokemon.getName());
+            System.out.println("HP set");
+            etempPokemon.setHitPoints(Integer.parseInt(n.nextLine()));
+            System.out.println("attack level set");
+            etempPokemon.setAttackLevel(Integer.parseInt(n.nextLine()));
+            System.out.println("defense level set");
+            etempPokemon.setDefenseLevel(Integer.parseInt(n.nextLine()));
+            return etempPokemon;
+        } else if (toSetType == 2) {
+            FirePokemon ftempPokemon = new FirePokemon();
+            System.out.println("Name your Pokemon");
+            ftempPokemon.setName(n.nextLine());
+            System.out.println("You named your Pokemon " + ftempPokemon.getName());
+            System.out.println("HP set");
+            ftempPokemon.setHitPoints(Integer.parseInt(n.nextLine()));
+            System.out.println("attack level set");
+            ftempPokemon.setAttackLevel(Integer.parseInt(n.nextLine()));
+            System.out.println("defense level set");
+            ftempPokemon.setDefenseLevel(Integer.parseInt(n.nextLine()));
+            return ftempPokemon;
+        } else if (toSetType == 3) {
+            WaterPokemon wtempPokemon = new WaterPokemon();
+            System.out.println("Name your Pokemon");
+            wtempPokemon.setName(n.nextLine());
+            System.out.println("You named your Pokemon " + wtempPokemon.getName());
+            System.out.println("HP set");
+            wtempPokemon.setHitPoints(Integer.parseInt(n.nextLine()));
+            System.out.println("attack level set");
+            wtempPokemon.setAttackLevel(Integer.parseInt(n.nextLine()));
+            System.out.println("defense level set");
+            wtempPokemon.setDefenseLevel(Integer.parseInt(n.nextLine()));
+            return wtempPokemon;
+        }
+        return tempPokemon;
     }
 
     /**
